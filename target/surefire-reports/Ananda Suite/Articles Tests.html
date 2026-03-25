@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>TestNG:  Articles Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Articles Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Mar 21 00:18:08 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>30 seconds (30299 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyViewArticleFieldsVisible()'><b>verifyViewArticleFieldsVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySearchByPartialTitle()'><b>verifySearchByPartialTitle</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyNoDeleteActionWhenNoSearchResult()'><b>verifyNoDeleteActionWhenNoSearchResult</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyAddFormCancelReturnsSafely()'><b>verifyAddFormCancelReturnsSafely</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyFreePaidColumnValues()'><b>verifyFreePaidColumnValues</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyNoViewActionWhenNoSearchResult()'><b>verifyNoViewActionWhenNoSearchResult</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyAddArticleFormOpens()'><b>verifyAddArticleFormOpens</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyDeletePopupOpenAndCancel()'><b>verifyDeletePopupOpenAndCancel</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySearchControlVisible()'><b>verifySearchControlVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyPublishAndCancelButtonsVisible()'><b>verifyPublishAndCancelButtonsVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyStatusControlVisibleInList()'><b>verifyStatusControlVisibleInList</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyArticlesTabLoads()'><b>verifyArticlesTabLoads</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyInvalidSearchShowsNoResult()'><b>verifyInvalidSearchShowsNoResult</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyPublishWithBlankMandatoryFieldsShowsValidation()'><b>verifyPublishWithBlankMandatoryFieldsShowsValidation</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyArticlesTableHeadersVisible()'><b>verifyArticlesTableHeadersVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyNoEditActionWhenNoSearchResult()'><b>verifyNoEditActionWhenNoSearchResult</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyAddArticleButtonVisible()'><b>verifyAddArticleButtonVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyEditArticleFlow()'><b>verifyEditArticleFlow</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyClearSearchRestoresList()'><b>verifyClearSearchRestoresList</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySearchByTitle()'><b>verifySearchByTitle</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyTypeProgramCategoryDropdownsVisible()'><b>verifyTypeProgramCategoryDropdownsVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySearchCaseInsensitive()'><b>verifySearchCaseInsensitive</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyVeryLongSearchHandled()'><b>verifyVeryLongSearchHandled</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyUploadedByFormat()'><b>verifyUploadedByFormat</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyViewArticleFlow()'><b>verifyViewArticleFlow</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyDescriptionEditorVisible()'><b>verifyDescriptionEditorVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyAddEditFormFieldsVisible()'><b>verifyAddEditFormFieldsVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySpecialCharacterSearchHandled()'><b>verifySpecialCharacterSearchHandled</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifyAttachmentControlVisible()'><b>verifyAttachmentControlVisible</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.ArticlesTest.verifySqlLikeSearchHandled()'><b>verifySqlLikeSearchHandled</b><br>Test class: com.ananda.web.admin.tests.ArticlesTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.ArticlesTest@351d00c0</td></tr>
+</table><p>
+</body>
+</html>

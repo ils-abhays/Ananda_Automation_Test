@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ananda Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.ananda.core.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Assessment Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.AssessmentTest">
+        <methods>
+          <include name="verifyAssessmentTabLoads"/>
+          <include name="verifyAssessmentBreadcrumbNavigation"/>
+          <include name="verifySearchGeneralHealth"/>
+          <include name="verifyDetailStatusChange"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="verifyViewSearchedSection"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.AssessmentTest -->
+    </classes>
+  </test> <!-- Assessment Tests(failed) -->
+  <test thread-count="5" name="Activity Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.ActivityTest">
+        <methods>
+          <include name="verifyActivityBreadcrumbNavigation"/>
+          <include name="verifyDeleteCancel"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifySearchActivity"/>
+          <include name="verifyEditActivity"/>
+          <include name="verifyStatusToggle"/>
+          <include name="verifyViewActivity"/>
+          <include name="verifyActivityTabLoads"/>
+          <include name="setUp"/>
+          <include name="verifySearchByVenue"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.ActivityTest -->
+    </classes>
+  </test> <!-- Activity Tests(failed) -->
+  <test thread-count="5" name="Recipe Collection Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.RecipeCollectionTest">
+        <methods>
+          <include name="verifyRecipeCollectionTabLoads"/>
+          <include name="tearDown"/>
+          <include name="verifySearchRecipeCollection"/>
+          <include name="verifyViewRecipeCollection"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.RecipeCollectionTest -->
+    </classes>
+  </test> <!-- Recipe Collection Tests(failed) -->
+  <test thread-count="5" name="Downloads Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.DownloadsTest">
+        <methods>
+          <include name="verifySearchByEmail"/>
+          <include name="setup"/>
+          <include name="verifyDownloadsPageLoads"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.DownloadsTest -->
+    </classes>
+  </test> <!-- Downloads Tests(failed) -->
+  <test thread-count="5" name="Guest User Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.GuestUserTest">
+        <methods>
+          <include name="verifySearchGuestUser"/>
+          <include name="verifyGuestUserPageLoads"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.GuestUserTest -->
+    </classes>
+  </test> <!-- Guest User Tests(failed) -->
+  <test thread-count="5" name="Team Members Tests(failed)">
+    <classes>
+      <class name="com.ananda.web.admin.tests.TeamMembersTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyTeamMembersPageLoads"/>
+          <include name="verifySearchTeamMember"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ananda.web.admin.tests.TeamMembersTest -->
+    </classes>
+  </test> <!-- Team Members Tests(failed) -->
+</suite> <!-- Failed suite [Ananda Suite] -->
