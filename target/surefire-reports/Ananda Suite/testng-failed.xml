@@ -4,87 +4,22 @@
   <listeners>
     <listener class-name="com.ananda.core.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="User Role Tests(failed)" verbose="0">
+  <test thread-count="5" name="Articles Tests(failed)" verbose="0">
     <classes>
-      <class name="com.ananda.web.admin.tests.UserRoleTest">
+      <class name="com.ananda.web.admin.tests.ArticlesTest">
         <methods>
+          <include name="verifyUploadedByFormat"/>
           <include name="pauseBetweenTests"/>
-          <include name="verifyAddRoleModalOpenAndFields"/>
-          <include name="setup"/>
+          <include name="resetArticlesContext"/>
           <include name="initExtentTest"/>
-          <include name="resetRoleContext"/>
+          <include name="setup"/>
           <include name="tearDownSuite"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ananda.web.admin.tests.UserRoleTest -->
+      </class> <!-- com.ananda.web.admin.tests.ArticlesTest -->
     </classes>
-  </test> <!-- User Role Tests(failed) -->
-  <test thread-count="5" name="Delete Requests Tests(failed)" verbose="0">
-    <classes>
-      <class name="com.ananda.web.admin.tests.DeleteRequestsTest">
-        <methods>
-          <include name="pauseBetweenTests"/>
-          <include name="initExtentTest"/>
-          <include name="verifySpecialCharacterSearchHandled"/>
-          <include name="tearDownSuite"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="resetDeleteRequestsContext"/>
-          <include name="verifyVeryLongSearchHandled"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.ananda.web.admin.tests.DeleteRequestsTest -->
-    </classes>
-  </test> <!-- Delete Requests Tests(failed) -->
-  <test thread-count="5" name="Announcement Tests(failed)" verbose="0">
-    <classes>
-      <class name="com.ananda.web.admin.tests.AnnouncementTest">
-        <methods>
-          <include name="pauseBetweenTests"/>
-          <include name="setup"/>
-          <include name="verifyAddFormFieldsVisible"/>
-          <include name="initExtentTest"/>
-          <include name="tearDownSuite"/>
-          <include name="tearDown"/>
-          <include name="resetAnnouncementContext"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.ananda.web.admin.tests.AnnouncementTest -->
-    </classes>
-  </test> <!-- Announcement Tests(failed) -->
-  <test thread-count="5" name="QMS Scorecard Tests(failed)" verbose="0">
-    <classes>
-      <class name="com.ananda.web.admin.tests.QMSScorecardTest">
-        <methods>
-          <include name="pauseBetweenTests"/>
-          <include name="initExtentTest"/>
-          <include name="tearDownSuite"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verifyRefreshAfterFilterChangesStability"/>
-          <include name="resetQmsContext"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.ananda.web.admin.tests.QMSScorecardTest -->
-    </classes>
-  </test> <!-- QMS Scorecard Tests(failed) -->
-  <test thread-count="5" name="Feedback Report Tests(failed)" verbose="0">
-    <classes>
-      <class name="com.ananda.web.admin.tests.FeedbackReportTest">
-        <methods>
-          <include name="pauseBetweenTests"/>
-          <include name="setup"/>
-          <include name="initExtentTest"/>
-          <include name="tearDownSuite"/>
-          <include name="tearDown"/>
-          <include name="resetFeedbackReportContext"/>
-          <include name="verifyScrollStability"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.ananda.web.admin.tests.FeedbackReportTest -->
-    </classes>
-  </test> <!-- Feedback Report Tests(failed) -->
+  </test> <!-- Articles Tests(failed) -->
   <test thread-count="5" name="Analytical Report Tests(failed)" verbose="0">
     <classes>
       <class name="com.ananda.web.admin.tests.AnalyticalReportTest">
@@ -92,10 +27,9 @@
           <include name="verifyRapidOpenCloseStability"/>
           <include name="pauseBetweenTests"/>
           <include name="initExtentTest"/>
-          <include name="setup"/>
           <include name="resetAnalyticalReportContext"/>
           <include name="tearDownSuite"/>
-          <include name="verifyColumnManagementAndAdvancedSearchSequentialUseHandledSafely"/>
+          <include name="setup"/>
           <include name="tearDown"/>
           <include name="verifyDefaultTableHeadersVisible"/>
           <include name="verifyPaginationControlsVisible"/>
