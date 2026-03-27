@@ -117,17 +117,32 @@ public class AccessManagementPage {
 
     public List<String> getVisibleRoleOptionsSnapshot() {
         List<String> optionsText = new ArrayList<>();
-        openRoleDropdown();
-        List<WebElement> opts = driver.findElements(roleOptions);
-        for (WebElement o : opts) {
-            String t = o.getText() == null ? "" : o.getText().trim();
-            if (!t.isEmpty()) optionsText.add(t);
-        }
-        if (optionsText.isEmpty()) {
-            List<WebElement> nativeOptions = driver.findElements(By.xpath("//select//option[normalize-space() and not(contains(normalize-space(),'Select'))]"));
-            for (WebElement o : nativeOptions) {
-                String t = o.getText() == null ? "" : o.getText().trim();
-                if (!t.isEmpty()) optionsText.add(t);
+        for (int retry = 0; retry < 4; retry++) {
+            try {
+                optionsText.clear();
+                openRoleDropdown();
+
+                List<WebElement> opts = driver.findElements(roleOptions);
+                for (WebElement o : opts) {
+                    String t = safeText(o);
+                    if (!t.isEmpty()) optionsText.add(t);
+                }
+                if (optionsText.isEmpty()) {
+                    List<WebElement> nativeOptions = driver.findElements(By.xpath("//select//option[normalize-space() and not(contains(normalize-space(),'Select'))]"));
+                    for (WebElement o : nativeOptions) {
+                        String t = safeText(o);
+                        if (!t.isEmpty()) optionsText.add(t);
+                    }
+                }
+                if (optionsText.isEmpty()) {
+                    String current = getCurrentSelectedRoleText();
+                    if (current != null && !current.isBlank() && !current.equalsIgnoreCase("Select...")) {
+                        optionsText.add(current.trim());
+                    }
+                }
+                closeOpenDropdown();
+                return optionsText;
+            } catch (StaleElementReferenceException ignored) {
             }
         }
         closeOpenDropdown();
@@ -417,5 +432,18 @@ public class AccessManagementPage {
         if (!text.isEmpty()) return text;
         String value = dropdown.getAttribute("value");
         return value == null ? "" : value.trim();
+    }
+
+    private String safeText(WebElement element) {
+        try {
+            String text = element.getText();
+            if (text != null && !text.trim().isEmpty()) {
+                return text.trim();
+            }
+            String value = element.getAttribute("value");
+            return value == null ? "" : value.trim();
+        } catch (Exception e) {
+            return "";
+        }
     }
 }

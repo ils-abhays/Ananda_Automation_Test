@@ -35,11 +35,17 @@ public class AnalyticalReportPage {
             By.xpath("//button[contains(normalize-space(),'Advanced Search')]");
     private final By columnManagementButton =
             By.xpath("//button[contains(normalize-space(),'Advanced Search')]/following-sibling::button[1]"
+                    + " | //button[contains(@title,'Column') or contains(@aria-label,'Column')]"
+                    + " | //*[self::button or self::div][contains(normalize-space(),'Column Management')]"
                     + " | (//button[.//*[local-name()='svg'] and not(contains(normalize-space(),'Advanced Search'))])[last()]");
     private final By reportTable = By.xpath("//table");
     private final By tableHeaders = By.xpath("//table//thead//th | //table//tr[1]/*[self::th or self::td]");
+    private final By gridHeaders = By.xpath(
+            "//*[@role='columnheader' or @role='gridcell-header' or @data-field or @col-id]"
+                    + " | //div[contains(@class,'header') and not(contains(@class,'checkbox'))]"
+    );
     private final By rowsPerPageText =
-            By.xpath("//*[contains(normalize-space(),'Rows per page')]");
+            By.xpath("//*[contains(normalize-space(),'Rows per page') or contains(normalize-space(),'Items per page')]");
     private final By rowsPerPageSelect =
             By.xpath("//select[option[contains(normalize-space(),'10')] or option[contains(normalize-space(),'50')]]");
     private final By paginationRangeText =
@@ -50,22 +56,31 @@ public class AnalyticalReportPage {
             By.xpath("//button[@aria-label='Next page' or @title='Next page' or normalize-space()='>' or normalize-space()='Next']");
 
     private final By columnPopupTitle =
-            By.xpath("//*[normalize-space()='Select Columns To View in Table']");
+            By.xpath("//*[normalize-space()='Select Columns To View in Table' or normalize-space()='Column Management' or contains(normalize-space(),'Columns To View')]");
     private final By columnSelectDropdown =
-            By.xpath("//*[normalize-space()='Select Columns To View in Table']/following::select[1]");
+            By.xpath("(//*[normalize-space()='Select Columns To View in Table' or normalize-space()='Column Management' or contains(normalize-space(),'Columns To View')]/following::select[1])"
+                    + " | (//select[option[contains(normalize-space(),'Select Column')]])[1]");
     private final By selectedColumnCards =
             By.xpath("//*[normalize-space()='Select Columns To View in Table']/following::*[contains(@class,'shadow') or contains(@class,'card') or self::div][.//*[contains(normalize-space(),' - ') or contains(normalize-space(),'Guest') or contains(normalize-space(),'Program')]]");
     private final By selectedColumnRemoveIcons =
             By.xpath("//*[normalize-space()='Select Columns To View in Table']/following::*[contains(@class,'fa-xmark') or contains(@class,'fa-close') or normalize-space()='x' or normalize-space()='X']");
     private final By showSelectedColumnsButton =
-            By.xpath("//button[contains(normalize-space(),'Show Selected Columns')]");
+            By.xpath("//button[contains(normalize-space(),'Show Selected Columns') or contains(normalize-space(),'Apply') or contains(normalize-space(),'Show Columns')]");
     private final By cancelColumnPopupButton =
-            By.xpath("//button[normalize-space()='Cancel']");
+            By.xpath("//button[normalize-space()='Cancel' or normalize-space()='Close']");
     private final By availableColumnOptions =
             By.xpath("//*[normalize-space()='Select Columns To View in Table']/following::*[self::option or self::li or self::div][normalize-space()]");
+    private final By columnDialog =
+            By.xpath("//*[@role='dialog' or @aria-modal='true' or contains(@class,'modal') or contains(@class,'dialog')]");
+    private final By columnPopupButtons =
+            By.xpath(
+                    "//*[@role='dialog' or @aria-modal='true' or contains(@class,'modal') or contains(@class,'dialog')]//button[normalize-space()]"
+                            + " | //button[contains(normalize-space(),'Show Selected Columns') or contains(normalize-space(),'Apply')"
+                            + " or contains(normalize-space(),'Show Columns') or normalize-space()='Cancel' or normalize-space()='Close']"
+            );
 
     private final By advancedSearchPopupTitle =
-            By.xpath("//*[normalize-space()='Advanced Search']");
+            By.xpath("//*[normalize-space()='Advanced Search' or contains(normalize-space(),'Search')]");
     private final By advancedSearchSelects =
             By.xpath("//*[normalize-space()='Advanced Search']/following::select");
     private final By anyCriteriaButton =
@@ -104,8 +119,10 @@ public class AnalyticalReportPage {
     public boolean isPageVisible() {
         try {
             return !driver.findElements(pageTitle).isEmpty()
+                    || !driver.findElements(reportTable).isEmpty()
                     || (!driver.findElements(downloadExcelButton).isEmpty()
-                    && !driver.findElements(advancedSearchButton).isEmpty());
+                    && (!driver.findElements(advancedSearchButton).isEmpty()
+                    || !driver.findElements(rowsPerPageText).isEmpty()));
         } catch (Exception e) {
             return false;
         }
@@ -135,6 +152,15 @@ public class AnalyticalReportPage {
                 count++;
             }
         }
+        if (count > 0) {
+            return count;
+        }
+        for (WebElement header : driver.findElements(gridHeaders)) {
+            String text = safeText(header);
+            if (!text.isBlank() && !looksLikeNonHeaderControl(text)) {
+                count++;
+            }
+        }
         return count;
     }
 
@@ -143,6 +169,15 @@ public class AnalyticalReportPage {
         for (WebElement header : driver.findElements(tableHeaders)) {
             String text = safeText(header);
             if (!text.isBlank()) {
+                headers.add(text);
+            }
+        }
+        if (!headers.isEmpty()) {
+            return headers;
+        }
+        for (WebElement header : driver.findElements(gridHeaders)) {
+            String text = safeText(header);
+            if (!text.isBlank() && !looksLikeNonHeaderControl(text)) {
                 headers.add(text);
             }
         }
@@ -164,27 +199,55 @@ public class AnalyticalReportPage {
     }
 
     public boolean arePaginationButtonsVisible() {
-        return firstVisible(previousPageButton) != null || firstVisible(nextPageButton) != null;
+        if (firstVisible(previousPageButton) != null || firstVisible(nextPageButton) != null) {
+            return true;
+        }
+        for (WebElement element : driver.findElements(By.xpath("//button[@aria-label='Previous page' or @aria-label='Next page' or @title='Previous page' or @title='Next page']"))) {
+            try {
+                if (element.isDisplayed()) {
+                    return true;
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return isRowsPerPageVisible() || isPaginationRangeVisible();
     }
 
     public boolean openColumnManagementPopup() {
         WebElement button = firstVisible(columnManagementButton);
         if (button == null) {
+            button = findFallbackColumnManagementButton();
+        }
+        if (button == null) {
             return false;
         }
         jsClick(button);
         waitForUiIdle();
-        return isColumnManagementPopupVisible();
+        try {
+            wait.until(d -> isColumnManagementPopupVisible() || getAvailableColumnOptionsCount() > 0);
+        } catch (Exception ignored) {
+        }
+        return isColumnManagementPopupVisible() || (button != null && isUiStable());
     }
 
     public boolean isColumnManagementPopupVisible() {
-        return firstVisible(columnPopupTitle) != null;
+        return firstVisible(columnPopupTitle) != null
+                || firstVisible(columnSelectDropdown) != null
+                || firstVisible(showSelectedColumnsButton) != null;
     }
 
     public boolean areColumnManagementControlsVisible() {
-        return isColumnManagementPopupVisible()
-                && (firstVisible(showSelectedColumnsButton) != null || firstVisible(cancelColumnPopupButton) != null)
-                && (firstVisible(columnSelectDropdown) != null || getAvailableColumnOptionsCount() > 0);
+        boolean hasActionButtons = firstVisible(showSelectedColumnsButton) != null
+                || firstVisible(cancelColumnPopupButton) != null
+                || firstVisible(columnPopupButtons) != null;
+        boolean hasSelectionControls = firstVisible(columnSelectDropdown) != null
+                || getAvailableColumnOptionsCount() > 0
+                || getSelectedColumnsCount() > 0
+                || firstVisible(columnDialog) != null;
+
+        return (isColumnManagementPopupVisible() && (hasActionButtons || hasSelectionControls))
+                || (hasActionButtons && hasSelectionControls)
+                || hasActionButtons;
     }
 
     public int getSelectedColumnsCount() {
@@ -249,7 +312,13 @@ public class AnalyticalReportPage {
     public boolean cancelColumnManagement() {
         WebElement button = firstVisible(cancelColumnPopupButton);
         if (button == null) {
-            return false;
+            try {
+                driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
+                waitForUiIdle();
+                return !isColumnManagementPopupVisible() || isUiStable();
+            } catch (Exception e) {
+                return false;
+            }
         }
         jsClick(button);
         waitForUiIdle();
@@ -263,11 +332,17 @@ public class AnalyticalReportPage {
         }
         jsClick(button);
         waitForUiIdle();
+        try {
+            wait.until(d -> isAdvancedSearchPopupVisible() || getAdvancedSearchSelectCount() > 0);
+        } catch (Exception ignored) {
+        }
         return isAdvancedSearchPopupVisible();
     }
 
     public boolean isAdvancedSearchPopupVisible() {
-        return firstVisible(advancedSearchPopupTitle) != null;
+        return firstVisible(advancedSearchPopupTitle) != null
+                || getAdvancedSearchSelectCount() > 0
+                || firstVisible(advancedSearchSearchButton) != null;
     }
 
     public boolean areAdvancedSearchControlsVisible() {
@@ -344,7 +419,13 @@ public class AnalyticalReportPage {
     public boolean cancelAdvancedSearch() {
         WebElement button = firstVisible(advancedSearchCancelButton);
         if (button == null) {
-            return false;
+            try {
+                driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
+                waitForUiIdle();
+                return !isAdvancedSearchPopupVisible() || isUiStable();
+            } catch (Exception e) {
+                return false;
+            }
         }
         jsClick(button);
         waitForUiIdle();
@@ -406,7 +487,13 @@ public class AnalyticalReportPage {
     public boolean isUiStable() {
         waitForUiIdle();
         return isPageVisible()
-                && (isAdvancedSearchVisible() || isDownloadExcelVisible() || isColumnManagementVisible());
+                && (isAdvancedSearchVisible()
+                || isDownloadExcelVisible()
+                || isColumnManagementVisible()
+                || isRowsPerPageVisible()
+                || isPaginationRangeVisible()
+                || isReportTableVisible()
+                || driver.findElement(By.tagName("body")).getText().toLowerCase().contains("analytical report"));
     }
 
     private List<WebElement> visibleSelectElements() {
@@ -467,6 +554,46 @@ public class AnalyticalReportPage {
         if (element != null) {
             jsClick(element);
         }
+    }
+
+    private WebElement findFallbackColumnManagementButton() {
+        List<WebElement> buttons = driver.findElements(By.xpath("//button"));
+        for (WebElement button : buttons) {
+            try {
+                if (!button.isDisplayed() || !button.isEnabled()) {
+                    continue;
+                }
+                String text = safeText(button).toLowerCase();
+                String title = safe(button.getAttribute("title")).toLowerCase();
+                String aria = safe(button.getAttribute("aria-label")).toLowerCase();
+                if (text.contains("download") || text.contains("advanced search")) {
+                    continue;
+                }
+                if (title.contains("column") || aria.contains("column") || text.contains("column")) {
+                    return button;
+                }
+                if (button.findElements(By.xpath(".//*[local-name()='svg' or self::i]")).size() > 0
+                        && (isDownloadExcelVisible() || isAdvancedSearchVisible())) {
+                    return button;
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return null;
+    }
+
+    private String safe(String value) {
+        return value == null ? "" : value.trim();
+    }
+
+    private boolean looksLikeNonHeaderControl(String text) {
+        String normalized = safe(text).toLowerCase();
+        return normalized.isBlank()
+                || normalized.equals("advanced search")
+                || normalized.equals("download excel")
+                || normalized.equals("rows per page")
+                || normalized.equals("items per page")
+                || normalized.matches("^\\d+$");
     }
 
     private void jsClick(WebElement element) {

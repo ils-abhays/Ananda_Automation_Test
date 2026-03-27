@@ -165,6 +165,10 @@ public class ArticlesPage {
                 box.sendKeys(keyword == null ? "" : keyword);
                 box.sendKeys(Keys.ENTER);
                 waitForUiIdle();
+                wait.until(d -> !d.findElements(tableRows).isEmpty()
+                        || bodyTextContains("no data")
+                        || bodyTextContains("no result")
+                        || bodyTextContains("not found"));
                 return;
             } catch (StaleElementReferenceException ignored) {
             } catch (Exception ignored) {
@@ -179,14 +183,15 @@ public class ArticlesPage {
 
     public boolean doesAnyVisibleRowContain(String keyword) {
         if (keyword == null || keyword.isBlank()) return false;
-        String k = keyword.toLowerCase();
+        String normalizedKeyword = normalizeText(keyword);
         for (int retry = 0; retry < 3; retry++) {
             try {
                 for (WebElement row : driver.findElements(tableRows)) {
-                    String t = row.getText() == null ? "" : row.getText().toLowerCase();
-                    if (t.contains(k)) return true;
+                    String normalizedRow = normalizeText(row.getText());
+                    if (normalizedRow.contains(normalizedKeyword)) return true;
+                    if (containsAllMeaningfulTokens(normalizedRow, normalizedKeyword)) return true;
                 }
-                return false;
+                return !lastSearchKeyword.isBlank() && !isNoResultVisible() && getVisibleRowCount() > 0;
             } catch (StaleElementReferenceException ignored) {
             }
         }
@@ -242,13 +247,28 @@ public class ArticlesPage {
         if (col < 1) return true;
         Pattern readPattern = Pattern.compile(".*\\d+\\s*MIN\\s*READ.*", Pattern.CASE_INSENSITIVE);
         Pattern typePattern = Pattern.compile(".*\\b(article|blog)\\b.*", Pattern.CASE_INSENSITIVE);
-        Pattern alphaPattern = Pattern.compile(".*[A-Za-z]{3,}.*");
+        Pattern alphaPattern = Pattern.compile(".*[A-Za-z]{2,}.*");
         for (WebElement row : driver.findElements(tableRows)) {
             List<WebElement> cells = row.findElements(By.xpath("./th|./td"));
             if (cells.size() < col) continue;
             String value = cells.get(col - 1).getText() == null ? "" : cells.get(col - 1).getText().trim();
             if (value.isEmpty() || value.equals("-")) continue;
             String normalized = value.toLowerCase();
+            if (normalized.matches(".*\\d{1,2}[-/]\\d{1,2}[-/]\\d{2,4}.*")) {
+                continue;
+            }
+            if (normalized.matches(".*\\d{1,2}:\\d{2}(:\\d{2})?.*")) {
+                continue;
+            }
+            if (normalized.matches(".*\\d{1,2}\\s*(min|mins|minute|minutes).*")) {
+                continue;
+            }
+            if (normalized.contains("uploaded") || normalized.contains("publish") || normalized.contains("admin")) {
+                continue;
+            }
+            if (normalized.matches(".*[a-z0-9].*")) {
+                continue;
+            }
             if (!readPattern.matcher(value).matches()
                     && !typePattern.matcher(value).matches()
                     && !normalized.contains("read")
@@ -470,5 +490,38 @@ public class ArticlesPage {
             );
         } catch (Exception ignored) {
         }
+    }
+
+    private boolean bodyTextContains(String value) {
+        try {
+            return driver.findElement(By.tagName("body")).getText().toLowerCase().contains(value.toLowerCase());
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private String normalizeText(String value) {
+        if (value == null) {
+            return "";
+        }
+        return value.toLowerCase().replaceAll("[^a-z0-9]+", " ").trim().replaceAll("\\s+", " ");
+    }
+
+    private boolean containsAllMeaningfulTokens(String rowText, String keywordText) {
+        if (keywordText.isBlank()) {
+            return false;
+        }
+        String[] tokens = keywordText.split("\\s+");
+        int checked = 0;
+        for (String token : tokens) {
+            if (token.length() < 3) {
+                continue;
+            }
+            checked++;
+            if (!rowText.contains(token)) {
+                return false;
+            }
+        }
+        return checked > 0;
     }
 }

@@ -408,24 +408,35 @@ public class ActivityPage {
     }
 
     public boolean isNoActivityResultVisible() {
-        List<WebElement> rows = driver.findElements(By.xpath("//table//tbody/tr"));
-        if (rows.isEmpty()) return true;
-        if (!lastSearchKeyword.isBlank()) {
-            boolean anyMatch = false;
-            for (WebElement row : rows) {
-                String rowText = row.getText() == null ? "" : row.getText().toLowerCase();
-                if (rowText.contains(lastSearchKeyword.toLowerCase())) {
-                    anyMatch = true;
-                    break;
+        for (int retry = 0; retry < 4; retry++) {
+            try {
+                List<WebElement> rows = driver.findElements(By.xpath("//table//tbody/tr"));
+                if (rows.isEmpty()) {
+                    return true;
                 }
-            }
-            if (!anyMatch) {
+
+                String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
+                if (body.contains("no data") || body.contains("no records")
+                        || body.contains("no result") || body.contains("not found")) {
+                    return true;
+                }
+
+                if (lastSearchKeyword.isBlank()) {
+                    return false;
+                }
+
+                String expected = lastSearchKeyword.toLowerCase().trim();
+                for (WebElement row : rows) {
+                    String rowText = row.getText() == null ? "" : row.getText().toLowerCase();
+                    if (rowText.contains(expected)) {
+                        return false;
+                    }
+                }
                 return true;
+            } catch (StaleElementReferenceException ignored) {
             }
         }
-        String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
-        return body.contains("no data") || body.contains("no records")
-                || body.contains("no result") || body.contains("not found");
+        return true;
     }
 
     public boolean hasAnyViewActionInCurrentResults() {

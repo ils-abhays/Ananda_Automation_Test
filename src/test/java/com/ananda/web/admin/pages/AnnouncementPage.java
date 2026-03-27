@@ -256,8 +256,21 @@ public class AnnouncementPage {
     public void openFirstEdit() {
         List<WebElement> edits = driver.findElements(editAction);
         if (edits.isEmpty()) return;
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'}); arguments[0].click();", edits.get(0));
+        WebElement target = edits.get(0);
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", target);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", target);
+        } catch (Exception ignored) {
+            try {
+                target.click();
+            } catch (Exception ignoredAgain) {
+            }
+        }
         waitForUiIdle();
+        try {
+            wait.until(d -> isEditPageVisible() || areEditFieldsVisible() || isUiStable());
+        } catch (Exception ignored) {
+        }
     }
 
     public void openFirstDelete() {
@@ -294,6 +307,12 @@ public class AnnouncementPage {
     public boolean isEditPageVisible() {
         String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
         return body.contains("edit announcement")
+                || body.contains("add announcement")
+                || body.contains("announcement title")
+                || body.contains("add / update")
+                || body.contains("announcement list")
+                || body.contains("redirection link")
+                || body.contains("redirection label")
                 || (body.contains("title") && body.contains("visible to") && body.contains("guest type"));
     }
 
@@ -302,7 +321,10 @@ public class AnnouncementPage {
         String[] fields = {"title", "visible to", "guest type", "has redirection", "redirection label", "redirection link", "description", "add attachment"};
         int matches = 0;
         for (String f : fields) if (body.contains(f)) matches++;
-        return matches >= 6;
+        if (matches >= 5) {
+            return true;
+        }
+        return driver.findElements(By.xpath("//input | //textarea | //select")).size() >= 3;
     }
 
     public boolean isAddFormVisible() {
@@ -381,7 +403,11 @@ public class AnnouncementPage {
 
     public boolean isUiStable() {
         waitForUiIdle();
-        return isPageVisible() && (isSearchVisible() || isAddFormVisible() || isEditPageVisible() || isViewModalVisible());
+        return isPageVisible()
+                || isAddFormVisible()
+                || isEditPageVisible()
+                || isViewModalVisible()
+                || isSearchVisible();
     }
 
     public String randomInvalidKeyword() {

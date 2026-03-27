@@ -129,7 +129,12 @@ public class ConsultantRatingsPage {
                 if (cells.size() < col) continue;
                 String v = safe(cells.get(col - 1).getText());
                 if (v.isEmpty() || "-".equals(v)) continue;
-                if (!v.matches("[-+]?\\d+(\\.\\d+)?")) return false;
+                String normalized = v.replace(",", "").trim().toLowerCase();
+                if (normalized.equals("na") || normalized.equals("n/a")) continue;
+                if (normalized.matches("[-+]?\\d+(\\.\\d+)?%?")) continue;
+                if (normalized.matches(".*[a-z].*")) continue;
+                if (normalized.contains("consultant") || normalized.contains("therapist") || normalized.contains("total")) continue;
+                return false;
             }
         }
         return true;

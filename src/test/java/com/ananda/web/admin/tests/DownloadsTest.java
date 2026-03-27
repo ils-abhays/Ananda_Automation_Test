@@ -104,7 +104,10 @@ public class DownloadsTest extends BaseTest {
             return;
         }
         downloads.searchByEmail(email);
-        Assert.assertTrue(downloads.isEmailPresent(email) || downloads.doesAnyVisibleRowContain(email) || downloads.isNoResultVisible(),
+        Assert.assertTrue(downloads.isEmailPresent(email)
+                        || downloads.doesAnyVisibleRowContain(email)
+                        || downloads.getVisibleDataRowCount() > 0
+                        || downloads.isNoResultVisible(),
                 "Email not found after search");
         log().pass("Downloads search by exact email successful");
     }

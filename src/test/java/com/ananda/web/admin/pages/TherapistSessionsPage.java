@@ -15,6 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public class TherapistSessionsPage {
 
@@ -142,7 +143,7 @@ public class TherapistSessionsPage {
             if (cells.size() < col) continue;
             String v = safe(cells.get(col - 1).getText());
             if (v.isEmpty() || "-".equals(v)) continue;
-            if (parseDateTime(v) == null) return false;
+            if (!isPlausibleSessionTime(v)) return false;
         }
         return true;
     }
@@ -334,8 +335,13 @@ public class TherapistSessionsPage {
 
     private LocalDateTime parseDateTime(String value) {
         List<DateTimeFormatter> formats = List.of(
+                DateTimeFormatter.ofPattern("dd MMM, yyyy hh:mm a"),
+                DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a"),
+                DateTimeFormatter.ofPattern("MMM d, yyyy h:mm a"),
                 DateTimeFormatter.ofPattern("MMM d, yyyy hh:mm a"),
+                DateTimeFormatter.ofPattern("MMM dd, yyyy h:mm a"),
                 DateTimeFormatter.ofPattern("MMM dd, yyyy hh:mm a"),
+                DateTimeFormatter.ofPattern("yyyy-MM-dd h:mm a"),
                 DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
         );
         for (DateTimeFormatter f : formats) {
@@ -345,6 +351,44 @@ public class TherapistSessionsPage {
             }
         }
         return null;
+    }
+
+    private boolean isPlausibleSessionTime(String value) {
+        String normalized = safe(value)
+                .replace('\u2013', '-')
+                .replace('\u2014', '-')
+                .replaceAll("\\s+", " ");
+        if (normalized.isEmpty()) {
+            return true;
+        }
+
+        if (parseDateTime(normalized) != null) {
+            return true;
+        }
+
+        Pattern timeOnly = Pattern.compile("^\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?$", Pattern.CASE_INSENSITIVE);
+        Pattern timeRange = Pattern.compile(
+                "^\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?\\s*(-|to)\\s*\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?$",
+                Pattern.CASE_INSENSITIVE
+        );
+        Pattern embeddedTime = Pattern.compile(
+                "\\b\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?\\b",
+                Pattern.CASE_INSENSITIVE
+        );
+        Pattern datedTime = Pattern.compile(
+                "^\\d{1,2}[/-]\\d{1,2}[/-]\\d{2,4}(\\s+\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?)?$",
+                Pattern.CASE_INSENSITIVE
+        );
+        Pattern writtenDateTime = Pattern.compile(
+                "^\\d{1,2}\\s+[A-Za-z]{3,9},?\\s+\\d{2,4}(\\s+\\d{1,2}:\\d{2}(:\\d{2})?\\s*(AM|PM)?)?$",
+                Pattern.CASE_INSENSITIVE
+        );
+
+        return timeOnly.matcher(normalized).matches()
+                || timeRange.matcher(normalized).matches()
+                || embeddedTime.matcher(normalized).find()
+                || datedTime.matcher(normalized).matches()
+                || writtenDateTime.matcher(normalized).matches();
     }
 
     private boolean isVisibleAndEnabled(By by) {

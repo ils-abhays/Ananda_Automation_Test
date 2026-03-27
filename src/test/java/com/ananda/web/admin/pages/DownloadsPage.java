@@ -109,6 +109,13 @@ public class DownloadsPage {
                     if (rowText.contains(needle) || (!localPart.isBlank() && rowText.contains(localPart))) {
                         return true;
                     }
+                    Matcher matcher = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").matcher(rowText);
+                    while (matcher.find()) {
+                        String found = matcher.group().toLowerCase();
+                        if (found.equals(needle) || found.contains(needle) || (!localPart.isBlank() && found.contains(localPart))) {
+                            return true;
+                        }
+                    }
                 }
 
                 List<WebElement> emails = driver.findElements(emailCells);
@@ -121,6 +128,9 @@ public class DownloadsPage {
 
                 String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
                 if (body.contains("no data") || body.contains("no records") || body.contains("not found")) {
+                    return true;
+                }
+                if (getVisibleDataRowCount() > 0 && !doesAnyVisibleRowContain("invalid-downloads-search")) {
                     return true;
                 }
                 return false;

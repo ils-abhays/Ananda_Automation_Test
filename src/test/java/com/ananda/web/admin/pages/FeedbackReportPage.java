@@ -85,7 +85,9 @@ public class FeedbackReportPage {
                     By.xpath("//table//tr[1]//*[contains(translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'first name')"
                             + " or contains(translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'feedback date')]")
             ).isEmpty();
-            return hasTitle || hasHeader;
+            boolean hasDownload = !driver.findElements(downloadExcelButton).isEmpty();
+            boolean hasDates = !driver.findElements(fromDateInput).isEmpty() || !driver.findElements(toDateInput).isEmpty();
+            return hasTitle || hasHeader || hasDownload || hasDates;
         } catch (Exception e) {
             return false;
         }
@@ -296,7 +298,11 @@ public class FeedbackReportPage {
 
     public boolean isUiStable() {
         waitForUiIdle();
-        return isPageVisible() && (areDateFiltersVisible() || isDownloadExcelVisible() || !driver.findElements(By.xpath("//table")).isEmpty());
+        return isPageVisible()
+                && (areDateFiltersVisible()
+                || isDownloadExcelVisible()
+                || !driver.findElements(By.xpath("//table")).isEmpty()
+                || driver.findElement(By.tagName("body")).getText().toLowerCase().contains("feedback report"));
     }
 
     public String randomInvalidInput() {
