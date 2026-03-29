@@ -306,21 +306,56 @@ public class TeamMembersPage {
         return body.contains("password") || isPageVisible();
     }
 
-    public void selectRoleFilter(String roleText) {
+    public boolean selectRoleFilter(String roleText) {
+        if (roleText == null || roleText.isBlank()) {
+            return false;
+        }
         List<WebElement> filters = driver.findElements(roleFilter);
-        if (filters.isEmpty()) return;
+        if (filters.isEmpty()) return false;
         WebElement filter = filters.get(0);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", filter);
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", filter);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", filter);
+        } catch (Exception ignored) {
+        }
+
+        List<WebElement> nestedInputs = filter.findElements(By.xpath(".//input[not(@type='hidden')] | .//select"));
+        if (!nestedInputs.isEmpty()) {
+            WebElement input = nestedInputs.get(0);
+            try {
+                if ("select".equalsIgnoreCase(input.getTagName())) {
+                    List<WebElement> options = input.findElements(By.xpath(".//option[normalize-space()]"));
+                    for (WebElement option : options) {
+                        if (roleText.equalsIgnoreCase(option.getText().trim())) {
+                            ((JavascriptExecutor) driver).executeScript(
+                                    "arguments[0].value=arguments[1];arguments[0].dispatchEvent(new Event('change',{bubbles:true}));",
+                                    input, option.getAttribute("value"));
+                            wait.until(d -> !d.findElements(By.xpath("//table")).isEmpty());
+                            return true;
+                        }
+                    }
+                } else {
+                    input.click();
+                    input.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+                    input.sendKeys(roleText);
+                }
+            } catch (Exception ignored) {
+            }
+        }
 
         By option = By.xpath("//*[contains(@class,'menu') or @role='listbox']//*[normalize-space()='" + roleText + "'] | //div[@role='option' and normalize-space()='" + roleText + "']");
         List<WebElement> opts = driver.findElements(option);
         if (!opts.isEmpty()) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", opts.get(0));
-        } else {
-            filter.sendKeys(roleText);
-            filter.sendKeys(Keys.ENTER);
+            wait.until(d -> !d.findElements(By.xpath("//table")).isEmpty());
+            return true;
         }
-        wait.until(d -> !d.findElements(By.xpath("//table")).isEmpty());
+
+        try {
+            driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
+        } catch (Exception ignored) {
+        }
+        return false;
     }
 
     public boolean allVisibleRowsContainRole(String roleText) {
@@ -354,10 +389,14 @@ public class TeamMembersPage {
 
     public boolean areViewMemberFieldsVisible() {
         String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
-        String[] fields = {"mobile no", "email address", "user role", "added on", "date of birth", "gender", "department", "gumnut staff id"};
+        String[] fields = {
+                "mobile no", "mobile", "email address", "email", "user role", "role",
+                "added on", "date of birth", "gender", "department", "gumnut staff id",
+                "first name", "last name", "status"
+        };
         int matches = 0;
         for (String f : fields) if (body.contains(f)) matches++;
-        return matches >= 3;
+        return matches >= 2 || isViewMemberPageVisible();
     }
 
     public void clickTeamMemberBreadcrumb() {

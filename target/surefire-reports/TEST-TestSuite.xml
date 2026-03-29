@@ -1,490 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="965.052" tests="403" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="79.227" tests="100" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="25"/>
+    <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="C:\Users\Synapse XTL\.cache\selenium\chromedriver\win64\146.0.7680.165\chromedriver.exe"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="E:\ananda\Ananda_Fixed_Framework\target\test-classes;E:\ananda\Ananda_Fixed_Framework\target\classes;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Synapse XTL\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Synapse XTL\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\Synapse XTL\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\Synapse XTL\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\Synapse XTL\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Synapse XTL\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Synapse XTL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Synapse XTL\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.3\webdrivermanager-5.6.3.jar;C:\Users\Synapse XTL\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\commons-io\commons-io\2.13.0\commons-io-2.13.0.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Synapse XTL\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Synapse XTL\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Synapse XTL\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Synapse XTL\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Synapse XTL\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Synapse XTL\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
-    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="25"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
-    <property name="sun.boot.library.path" value="C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\latest\bin"/>
-    <property name="sun.java.command" value="C:\Users\Synapse XTL\AppData\Local\Temp\surefire8403987138550418135\surefirebooter-20260326234828754_3.jar C:\Users\Synapse XTL\AppData\Local\Temp\surefire8403987138550418135 2026-03-26T23-48-28_504-jvmRun1 surefire-20260326234828754_1tmp surefire_0-20260326234828754_2tmp"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\Synapse XTL\AppData\Local\Temp\surefire10195852960016583840\surefirebooter-20260329151548298_3.jar C:\Users\Synapse XTL\AppData\Local\Temp\surefire10195852960016583840 2026-03-29T15-15-47_987-jvmRun1 surefire-20260329151548298_1tmp surefire_0-20260329151548298_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="DownloadsTest,TeamMembersTest,AccessManagementTest,AnalyticalReportTest"/>
     <property name="surefire.test.class.path" value="E:\ananda\Ananda_Fixed_Framework\target\test-classes;E:\ananda\Ananda_Fixed_Framework\target\classes;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Synapse XTL\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Synapse XTL\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Synapse XTL\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\Synapse XTL\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\Synapse XTL\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\Synapse XTL\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\Synapse XTL\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\Synapse XTL\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Synapse XTL\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Synapse XTL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Synapse XTL\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.3\webdrivermanager-5.6.3.jar;C:\Users\Synapse XTL\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\commons-io\commons-io\2.13.0\commons-io-2.13.0.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\Synapse XTL\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\Synapse XTL\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Synapse XTL\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Synapse XTL\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Synapse XTL\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Synapse XTL\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Synapse XTL\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Synapse XTL\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Synapse XTL\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Synapse XTL"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2026-01-20"/>
-    <property name="java.home" value="C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\latest"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="E:\ananda\Ananda_Fixed_Framework"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Synapse XTL\AppData\Local\Temp\surefire8403987138550418135\surefirebooter-20260326234828754_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Synapse XTL\AppData\Local\Temp\surefire10195852960016583840\surefirebooter-20260329151548298_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="25.0.2+10-LTS"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
     <property name="user.name" value="Synapse XTL"/>
-    <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Temurin-25.0.2+10"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\Synapse XTL\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\SYNAPS~1\AppData\Local\Temp\"/>
-    <property name="java.version" value="25.0.2"/>
+    <property name="java.version" value="17.0.12"/>
     <property name="user.dir" value="E:\ananda\Ananda_Fixed_Framework"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\latest\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\gradle\latest\bin;C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin;C:\Users\Synapse XTL\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\latest\bin;C:\Users\Synapse XTL\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python313\Scripts\;C:\Python313\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Roaming\npm;%JAVA_HOME%\bin;C:\platform-tools;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Synapse XTL\AppData\Local\Microsoft\WindowsApps;C:\Users\Synapse XTL\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Synapse XTL\AppData\Roaming\npm;C:\Users\Synapse XTL\AppData\Local\GitHubDesktop\bin;C:\Users\Synapse XTL\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-17\bin;C:\Users\Synapse XTL\.maven\maven-3.9.12\bin;C:\Users\Synapse XTL\.codex\tmp\arg0\codex-arg00VNpT0;C:\Users\Synapse XTL\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python313\Scripts\;C:\Python313\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Lenovo\AppData\Roaming\npm;%JAVA_HOME%\bin;C:\platform-tools;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Synapse XTL\AppData\Local\Microsoft\WindowsApps;C:\Users\Synapse XTL\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Synapse XTL\AppData\Roaming\npm;C:\Users\Synapse XTL\AppData\Local\GitHubDesktop\bin;C:\Users\Synapse XTL\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\Synapse XTL\.vscode\extensions\openai.chatgpt-26.324.21329-win32-x64\bin\windows-x86_64;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="UTF-8"/>
-    <property name="java.vendor" value="Eclipse Adoptium"/>
-    <property name="java.vm.version" value="25.0.2+10-LTS"/>
-    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="69.0"/>
+    <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="validLogin" classname="com.ananda.web.admin.tests.AdminLoginTest" time="11.27">
+  <testcase name="verifyAccessManagementPageLoads" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.015">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Mar 26, 2026 11:48:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Mar 29, 2026 3:15:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 146
-Mar 26, 2026 11:48:34 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Mar 29, 2026 3:15:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 146.0.7680.154. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="invalidPasswordFormat" classname="com.ananda.web.admin.tests.AdminLoginTest" time="1.657"/>
-  <testcase name="invalidPasswordLogin" classname="com.ananda.web.admin.tests.AdminLoginTest" time="31.275"/>
-  <testcase name="incorrectPasswordLogin" classname="com.ananda.web.admin.tests.AdminLoginTest" time="1.999"/>
-  <testcase name="verifyLoginFormElementsVisible" classname="com.ananda.web.admin.tests.AdminLoginTest" time="0.376"/>
-  <testcase name="forgotPasswordNavigation" classname="com.ananda.web.admin.tests.AdminLoginTest" time="0.684"/>
-  <testcase name="forgotPasswordBlankEmail" classname="com.ananda.web.admin.tests.AdminLoginTest" time="31.083"/>
-  <testcase name="forgotPasswordInvalidEmailFormat" classname="com.ananda.web.admin.tests.AdminLoginTest" time="1.268"/>
-  <testcase name="verifyPasswordFieldMasked" classname="com.ananda.web.admin.tests.AdminLoginTest" time="0.232"/>
-  <testcase name="verifyForgotPasswordFormElementsVisible" classname="com.ananda.web.admin.tests.AdminLoginTest" time="0.639"/>
-  <testcase name="verifyProgramsButton" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.391"/>
-  <testcase name="verifyFilterByLevel" classname="com.ananda.web.admin.tests.ProgramsTest" time="28.674"/>
-  <testcase name="verifyDurationRange" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.464"/>
-  <testcase name="verifySearchFeature" classname="com.ananda.web.admin.tests.ProgramsTest" time="2.889"/>
-  <testcase name="verifyStatusSelection" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.325"/>
-  <testcase name="verifySearchProgram1" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.083"/>
-  <testcase name="verifyViewProgram" classname="com.ananda.web.admin.tests.ProgramsTest" time="25.995"/>
-  <testcase name="verifyDetailStatusChange" classname="com.ananda.web.admin.tests.ProgramsTest" time="25.639"/>
-  <testcase name="verifyEditRequest" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.043"/>
-  <testcase name="verifyCancelEdit" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.117"/>
-  <testcase name="verifyBreadcrumb" classname="com.ananda.web.admin.tests.ProgramsTest" time="2.076"/>
-  <testcase name="verifyProgramTableHeaders" classname="com.ananda.web.admin.tests.ProgramsTest" time="1.332">
-    <system-out><![CDATA[[ProgramsHeaderCheck] nonEmptyColumns=0, tokenMatches=1, headersText='master data
-user management
-content management
-reports
-analytical report
-user manual
-master data
-devil admin
-programs
-assessment
-activity
-recipe collection'
-]]></system-out>
-  </testcase>
-  <testcase name="verifyViewProgramFieldVisibility" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.197"/>
-  <testcase name="verifyRequestForEditModalFields" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.269"/>
-  <testcase name="verifySearchWithInvalidKeyword" classname="com.ananda.web.admin.tests.ProgramsTest" time="1.255"/>
-  <testcase name="verifyInvalidDurationRange" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.422"/>
-  <testcase name="verifyNoViewActionWhenNoResults" classname="com.ananda.web.admin.tests.ProgramsTest" time="1.46"/>
-  <testcase name="verifySearchWithSpecialCharacterKeyword" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.424"/>
-  <testcase name="verifySearchWithVeryLongInvalidKeyword" classname="com.ananda.web.admin.tests.ProgramsTest" time="1.668"/>
-  <testcase name="verifyMinGreaterThanMaxDuration" classname="com.ananda.web.admin.tests.ProgramsTest" time="0.958"/>
-  <testcase name="verifyAssessmentTabLoads" classname="com.ananda.web.admin.tests.AssessmentTest" time="1.819"/>
-  <testcase name="verifySearchGeneralHealth" classname="com.ananda.web.admin.tests.AssessmentTest" time="0.114"/>
-  <testcase name="verifyViewSearchedSection" classname="com.ananda.web.admin.tests.AssessmentTest" time="0.158"/>
-  <testcase name="verifyDetailStatusChange" classname="com.ananda.web.admin.tests.AssessmentTest" time="17.131"/>
-  <testcase name="verifyAssessmentBreadcrumbNavigation" classname="com.ananda.web.admin.tests.AssessmentTest" time="12.547"/>
-  <testcase name="verifyAssessmentTableHeaders" classname="com.ananda.web.admin.tests.AssessmentTest" time="3.706"/>
-  <testcase name="verifyQuestionCountColumnFormat" classname="com.ananda.web.admin.tests.AssessmentTest" time="2.753"/>
-  <testcase name="verifyPositionColumnFormat" classname="com.ananda.web.admin.tests.AssessmentTest" time="2.964"/>
-  <testcase name="verifyCreatedOnDateFormat" classname="com.ananda.web.admin.tests.AssessmentTest" time="2.52"/>
-  <testcase name="verifyViewSectionDetailsContent" classname="com.ananda.web.admin.tests.AssessmentTest" time="5.158"/>
-  <testcase name="verifyRequestForEditModalOpenAndFields" classname="com.ananda.web.admin.tests.AssessmentTest" time="5.128"/>
-  <testcase name="verifyRequestForEditModalCancel" classname="com.ananda.web.admin.tests.AssessmentTest" time="17.8"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.AssessmentTest" time="7.516"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.AssessmentTest" time="7.366"/>
-  <testcase name="verifyActivityTabLoads" classname="com.ananda.web.admin.tests.ActivityTest" time="2.804"/>
-  <testcase name="verifySearchActivity" classname="com.ananda.web.admin.tests.ActivityTest" time="0.002"/>
-  <testcase name="verifyActivityTableHeaders" classname="com.ananda.web.admin.tests.ActivityTest" time="3.263"/>
-  <testcase name="verifyCapacityColumnFormat" classname="com.ananda.web.admin.tests.ActivityTest" time="0.445"/>
-  <testcase name="verifyActivityDateColumnFormat" classname="com.ananda.web.admin.tests.ActivityTest" time="0.372"/>
-  <testcase name="verifyActivityTimeColumnFormat" classname="com.ananda.web.admin.tests.ActivityTest" time="1.444"/>
-  <testcase name="verifyViewActivity" classname="com.ananda.web.admin.tests.ActivityTest" time="0.002"/>
-  <testcase name="verifyViewActivityFieldVisibility" classname="com.ananda.web.admin.tests.ActivityTest" time="0.0"/>
-  <testcase name="verifyActivityBreadcrumbNavigation" classname="com.ananda.web.admin.tests.ActivityTest" time="0.498"/>
-  <testcase name="verifySearchByVenue" classname="com.ananda.web.admin.tests.ActivityTest" time="0.0"/>
-  <testcase name="verifyStatusToggle" classname="com.ananda.web.admin.tests.ActivityTest" time="0.002"/>
-  <testcase name="verifyEditActivity" classname="com.ananda.web.admin.tests.ActivityTest" time="0.002"/>
-  <testcase name="verifyDeleteConfirmationPopup" classname="com.ananda.web.admin.tests.ActivityTest" time="0.0"/>
-  <testcase name="verifyDeleteCancel" classname="com.ananda.web.admin.tests.ActivityTest" time="0.0"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.ActivityTest" time="7.532"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ActivityTest" time="6.416"/>
-  <testcase name="verifyNoEditActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ActivityTest" time="6.492"/>
-  <testcase name="verifyNoDeleteActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ActivityTest" time="6.139"/>
-  <testcase name="verifyRecipeCollectionTabLoads" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.407"/>
-  <testcase name="verifySearchRecipeCollection" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.0"/>
-  <testcase name="verifyRecipeCollectionTableHeaders" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="1.155"/>
-  <testcase name="verifyRecipeCountColumnFormat" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.928"/>
-  <testcase name="verifyCreatedOnColumnFormat" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="1.083"/>
-  <testcase name="verifyStatusColumnValues" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="1.091"/>
-  <testcase name="verifyViewRecipeCollection" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.001"/>
-  <testcase name="verifyViewCollectionDetailsFields" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.002"/>
-  <testcase name="verifyRecipeListInsideCollectionPage" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.0"/>
-  <testcase name="verifyRecipeCollectionBreadcrumbNavigation" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.0"/>
-  <testcase name="verifyEditRecipeCollectionPageFields" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.0"/>
-  <testcase name="verifyAddRecipePageFields" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.001"/>
-  <testcase name="verifyEditRecipePageFields" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.0"/>
-  <testcase name="verifyDeleteConfirmationPopupOnCollectionList" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="0.002"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="9.517"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="8.288"/>
-  <testcase name="verifyNoEditActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="8.076"/>
-  <testcase name="verifyNoDeleteActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.RecipeCollectionTest" time="8.785"/>
-  <testcase name="verifyGuestUserPageLoads" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.114"/>
-  <testcase name="verifySearchGuestUser" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.0"/>
-  <testcase name="verifyGuestUserTableHeaders" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.791"/>
-  <testcase name="verifyGuestUserFilterControlsVisible" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.179"/>
-  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.GuestUserTest" time="1.113"/>
-  <testcase name="verifyStartEndDateFormat" classname="com.ananda.web.admin.tests.GuestUserTest" time="1.474"/>
-  <testcase name="verifyStatusColumnValues" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.31"/>
-  <testcase name="verifyOtpColumnToggleVisibility" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.112"/>
-  <testcase name="verifyViewGuestUser" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.0"/>
-  <testcase name="verifyGuestUserBreadcrumbNavigation" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.0"/>
-  <testcase name="verifyEditGuestUserFields" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.0"/>
-  <testcase name="verifyDeleteConfirmationPopup" classname="com.ananda.web.admin.tests.GuestUserTest" time="0.0"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.GuestUserTest" time="12.821"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.GuestUserTest" time="12.455"/>
-  <testcase name="verifyDownloadsPageLoads" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.961"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.346"/>
-  <testcase name="verifyDownloadsTableHeaders" classname="com.ananda.web.admin.tests.DownloadsTest" time="1.216"/>
-  <testcase name="verifyDeleteActionVisible" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.043"/>
-  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.64"/>
-  <testcase name="verifyLastLoginFormat" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.754"/>
-  <testcase name="verifySearchByEmail" classname="com.ananda.web.admin.tests.DownloadsTest" time="4.036"/>
-  <testcase name="verifySearchByPartialEmail" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.587"/>
-  <testcase name="verifySearchByNameOrMobile" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.445"/>
-  <testcase name="verifySearchCaseInsensitivity" classname="com.ananda.web.admin.tests.DownloadsTest" time="1.024"/>
-  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.DownloadsTest" time="1.499"/>
-  <testcase name="verifyDeletePopupOpenAndCancel" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.701"/>
-  <testcase name="verifyDeleteConfirmOptional" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.003"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.DownloadsTest" time="1.465"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.928"/>
-  <testcase name="verifyLongKeywordSearchStability" classname="com.ananda.web.admin.tests.DownloadsTest" time="2.94"/>
+  <testcase name="verifyUserRoleDropdownVisible" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.021"/>
+  <testcase name="verifyRoleDropdownHasOptions" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.166"/>
+  <testcase name="verifyRoleOptionsAvailable" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.174"/>
+  <testcase name="verifyEmptyPromptBeforeSelectionOrLoadedState" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.016"/>
+  <testcase name="verifySelectRoleLoadsPermissionMatrix" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.001"/>
+  <testcase name="verifyCommonPermissionModulesVisible" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.03"/>
+  <testcase name="verifyPermissionValuesAllowedSet" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.06"/>
+  <testcase name="verifyPermissionDropdownsInteractable" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.051"/>
+  <testcase name="verifyCanOpenAnyPermissionDropdown" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.1"/>
+  <testcase name="verifyRoleSwitchChangesContext" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.001"/>
+  <testcase name="verifyRoleSelectionPersistsAcrossRefresh" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
+  <testcase name="verifyPermissionUpdateOptional" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
+  <testcase name="verifyScrollAndUiStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.052"/>
+  <testcase name="verifyLastPermissionControlUsableAfterScroll" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.081"/>
+  <testcase name="verifyNoDuplicatePermissionRows" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.065"/>
+  <testcase name="verifyInvalidRoleSelectionHandled" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.229"/>
+  <testcase name="verifyRapidRoleSwitchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.183"/>
+  <testcase name="verifyNoBlankPermissionValuesAfterRoleSelection" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
+  <testcase name="verifySpecialCharacterRoleSearchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.189"/>
+  <testcase name="verifyVeryLongRoleSearchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.297"/>
+  <testcase name="verifyRefreshAfterInvalidSelectionStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.402"/>
+  <testcase name="verifyAnalyticalReportPageLoads" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.01"/>
+  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.015"/>
+  <testcase name="verifyAdvancedSearchButtonVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.014"/>
+  <testcase name="verifyColumnManagementIconVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.016"/>
+  <testcase name="verifyReportTableVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.014"/>
+  <testcase name="verifyDefaultTableHeadersVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.034"/>
+  <testcase name="verifyRowsPerPageVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.031"/>
+  <testcase name="verifyPaginationRangeVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.616"/>
+  <testcase name="verifyPaginationControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.038"/>
+  <testcase name="verifyColumnManagementPopupOpens" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.306"/>
+  <testcase name="verifyColumnManagementControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.369"/>
+  <testcase name="verifyDefaultSelectedColumnsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.191"/>
+  <testcase name="verifyAvailableColumnsLoaded" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.27"/>
+  <testcase name="verifyColumnManagementCancelClosesPopup" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.201"/>
+  <testcase name="verifyShowSelectedColumnsHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.198"/>
+  <testcase name="verifyAdvancedSearchPopupOpens" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.007"/>
+  <testcase name="verifyAdvancedSearchControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyCriteriaModeButtonsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.007"/>
+  <testcase name="verifyAdvancedSearchDropdownsLoaded" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.006"/>
+  <testcase name="verifySingleCriterionCanBePreparedSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.004"/>
+  <testcase name="verifyAdvancedSearchCancelClosesPopup" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.006"/>
+  <testcase name="verifyRepeatedColumnPopupOpenHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.022"/>
+  <testcase name="verifyRemovingSelectedColumnHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.196"/>
+  <testcase name="verifyShowSelectedColumnsWithoutChangesHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.264"/>
+  <testcase name="verifySearchWithoutCriteriaHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.006"/>
+  <testcase name="verifyAdvancedSearchResetHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.007"/>
+  <testcase name="verifyCriterionDeleteHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyCriterionEditHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyRepeatedAdvancedSearchOpenHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyRepeatedColumnRemoveHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.203"/>
+  <testcase name="verifyColumnPopupCancelAfterChangeHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.221"/>
+  <testcase name="verifyAdvancedSearchCancelAfterCriterionHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyRepeatedSearchWithoutCriteriaHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.006"/>
+  <testcase name="verifyRepeatedResetHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.004"/>
+  <testcase name="verifyColumnPopupReopenAfterCancelHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.018"/>
+  <testcase name="verifyAdvancedSearchReopenAfterCancelHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyColumnManagementAndAdvancedSearchSequentialUseHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.089"/>
+  <testcase name="verifyLongUiScrollHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.026"/>
+  <testcase name="verifyRefreshAfterColumnPopupHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.022"/>
+  <testcase name="verifyRefreshAfterAdvancedSearchHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.005"/>
+  <testcase name="verifyRapidOpenCloseStability" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.081"/>
+  <testcase name="verifyDownloadsPageLoads" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.029"/>
+  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.023"/>
+  <testcase name="verifyDownloadsTableHeaders" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.028"/>
+  <testcase name="verifyDeleteActionVisible" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.014"/>
+  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.275"/>
+  <testcase name="verifyLastLoginFormat" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.263"/>
+  <testcase name="verifySearchByEmail" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.007"/>
+  <testcase name="verifySearchByPartialEmail" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.005"/>
+  <testcase name="verifySearchByNameOrMobile" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.154"/>
+  <testcase name="verifySearchCaseInsensitivity" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.006"/>
+  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.105"/>
+  <testcase name="verifyDeletePopupOpenAndCancel" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.004"/>
+  <testcase name="verifyDeleteConfirmOptional" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.0"/>
+  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.388"/>
+  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.315"/>
+  <testcase name="verifyLongKeywordSearchStability" classname="com.ananda.web.admin.tests.DownloadsTest" time="0.936"/>
   <testcase name="verifyTeamMembersPageLoads" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.015"/>
-  <testcase name="verifyTeamMembersSearchVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.063"/>
-  <testcase name="verifyRoleFilterVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.033"/>
-  <testcase name="verifyNewMemberButtonVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.025"/>
-  <testcase name="verifyTeamMembersTableHeadersVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.082"/>
-  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.015"/>
-  <testcase name="verifyAddedOnDateFormat" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.017"/>
-  <testcase name="verifyRowActionsVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.074"/>
-  <testcase name="verifyOtpToggleVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.066"/>
-  <testcase name="verifyPasswordIndicatorVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.06"/>
+  <testcase name="verifyTeamMembersSearchVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.029"/>
+  <testcase name="verifyRoleFilterVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.012"/>
+  <testcase name="verifyNewMemberButtonVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.011"/>
+  <testcase name="verifyTeamMembersTableHeadersVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.035"/>
+  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.008"/>
+  <testcase name="verifyAddedOnDateFormat" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.008"/>
+  <testcase name="verifyRowActionsVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.042"/>
+  <testcase name="verifyOtpToggleVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.027"/>
+  <testcase name="verifyPasswordIndicatorVisible" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.027"/>
   <testcase name="verifySearchTeamMember" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.0"/>
   <testcase name="verifySearchByEmail" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.0"/>
   <testcase name="verifySearchByMobile" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.0"/>
-  <testcase name="verifyRoleFilter" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.0"/>
-  <testcase name="verifyViewMemberFlow" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.032"/>
-  <testcase name="verifyTeamMemberBreadcrumbNavigation" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.014"/>
-  <testcase name="verifyEditMemberPageFields" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.015"/>
-  <testcase name="verifyOpenAddNewMemberForm" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.021"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.TeamMembersTest" time="2.275"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.728"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.TeamMembersTest" time="2.949"/>
-  <testcase name="verifyUserRolePageLoads" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.018"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.067"/>
-  <testcase name="verifyNewRoleButtonVisible" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.027"/>
-  <testcase name="verifyUserRoleTableHeaders" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.781"/>
-  <testcase name="verifySearchByRoleTitle" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.0"/>
-  <testcase name="verifySearchByPartialRoleTitle" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.004"/>
-  <testcase name="verifySearchIsCaseInsensitive" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.0"/>
-  <testcase name="verifyEditRoleModalOpenAndFields" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.895"/>
-  <testcase name="verifyEditRolePrefilledData" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.873"/>
-  <testcase name="verifyEditModalCancel" classname="com.ananda.web.admin.tests.UserRoleTest" time="1.088"/>
-  <testcase name="verifyAddRoleModalOpenAndFields" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.048"/>
-  <testcase name="verifyStatusControlVisible" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.562"/>
-  <testcase name="verifyStatusToggleOptional" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.0"/>
-  <testcase name="verifyDeleteActionVisible" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.017"/>
-  <testcase name="verifyDeletePopupOpenAndCancel" classname="com.ananda.web.admin.tests.UserRoleTest" time="0.708"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.UserRoleTest" time="2.051"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.UserRoleTest" time="1.644"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.UserRoleTest" time="2.818"/>
-  <testcase name="verifyAccessManagementPageLoads" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.026"/>
-  <testcase name="verifyUserRoleDropdownVisible" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.178"/>
-  <testcase name="verifyRoleDropdownHasOptions" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.38"/>
-  <testcase name="verifyRoleOptionsAvailable" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.316"/>
-  <testcase name="verifyEmptyPromptBeforeSelectionOrLoadedState" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.171"/>
-  <testcase name="verifySelectRoleLoadsPermissionMatrix" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
-  <testcase name="verifyCommonPermissionModulesVisible" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.098"/>
-  <testcase name="verifyPermissionValuesAllowedSet" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.075"/>
-  <testcase name="verifyPermissionDropdownsInteractable" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.108"/>
-  <testcase name="verifyCanOpenAnyPermissionDropdown" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.132"/>
-  <testcase name="verifyRoleSwitchChangesContext" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
-  <testcase name="verifyRoleSelectionPersistsAcrossRefresh" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
-  <testcase name="verifyPermissionUpdateOptional" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
-  <testcase name="verifyScrollAndUiStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.212"/>
-  <testcase name="verifyLastPermissionControlUsableAfterScroll" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.13"/>
-  <testcase name="verifyNoDuplicatePermissionRows" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.159"/>
-  <testcase name="verifyInvalidRoleSelectionHandled" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.122"/>
-  <testcase name="verifyRapidRoleSwitchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.748"/>
-  <testcase name="verifyNoBlankPermissionValuesAfterRoleSelection" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.0"/>
-  <testcase name="verifySpecialCharacterRoleSearchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.136"/>
-  <testcase name="verifyVeryLongRoleSearchStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.105"/>
-  <testcase name="verifyRefreshAfterInvalidSelectionStability" classname="com.ananda.web.admin.tests.AccessManagementTest" time="0.543"/>
-  <testcase name="verifyDeleteRequestsPageLoads" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.122"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.08"/>
-  <testcase name="verifyDeleteRequestsTableHeaders" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.438"/>
-  <testcase name="verifyEmailColumnFormat" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.472"/>
-  <testcase name="verifyRequestedOnDateFormat" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="2.307"/>
-  <testcase name="verifyAutoDeleteByDateFormat" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="1.069"/>
-  <testcase name="verifyRecoverActionVisible" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.471"/>
-  <testcase name="verifyDeleteAccountActionVisible" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.048"/>
-  <testcase name="verifySearchByEmail" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.0"/>
-  <testcase name="verifySearchByFirstName" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.0"/>
-  <testcase name="verifySearchByLastName" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.0"/>
-  <testcase name="verifyRecoverActionOpensConfirmationOrSafeAction" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.717"/>
-  <testcase name="verifyDeleteAccountActionOpensConfirmationOrSafeAction" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.781"/>
-  <testcase name="verifyClearSearchRestoresStableList" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.307"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="2.71"/>
-  <testcase name="verifyNoRecoverActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="2.48"/>
-  <testcase name="verifyNoDeleteActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="2.432"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="0.961"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.DeleteRequestsTest" time="3.133"/>
-  <testcase name="verifyArticlesTabLoads" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.044"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.118"/>
-  <testcase name="verifyAddArticleButtonVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.094"/>
-  <testcase name="verifyArticlesTableHeadersVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.543"/>
-  <testcase name="verifyUploadedByFormat" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.278"/>
-  <testcase name="verifyFreePaidColumnValues" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.318"/>
-  <testcase name="verifyStatusControlVisibleInList" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.658"/>
-  <testcase name="verifySearchByTitle" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.0"/>
-  <testcase name="verifySearchByPartialTitle" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.0"/>
-  <testcase name="verifySearchCaseInsensitive" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.0"/>
-  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.019"/>
-  <testcase name="verifyViewArticleFlow" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.382"/>
-  <testcase name="verifyViewArticleFieldsVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.292"/>
-  <testcase name="verifyEditArticleFlow" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.004"/>
-  <testcase name="verifyAddArticleFormOpens" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.559"/>
-  <testcase name="verifyAddEditFormFieldsVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.476"/>
-  <testcase name="verifyTypeProgramCategoryDropdownsVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.661"/>
-  <testcase name="verifyDescriptionEditorVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.468"/>
-  <testcase name="verifyAttachmentControlVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.473"/>
-  <testcase name="verifyPublishAndCancelButtonsVisible" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.666"/>
-  <testcase name="verifyDeletePopupOpenAndCancel" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.059"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.838"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.683"/>
-  <testcase name="verifyNoEditActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.646"/>
-  <testcase name="verifyNoDeleteActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.644"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.ArticlesTest" time="1.577"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.ArticlesTest" time="3.652"/>
-  <testcase name="verifySqlLikeSearchHandled" classname="com.ananda.web.admin.tests.ArticlesTest" time="2.371"/>
-  <testcase name="verifyPublishWithBlankMandatoryFieldsShowsValidation" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.522"/>
-  <testcase name="verifyAddFormCancelReturnsSafely" classname="com.ananda.web.admin.tests.ArticlesTest" time="0.559"/>
-  <testcase name="verifyAnnouncementTabLoads" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.09"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.153"/>
-  <testcase name="verifyAddAnnouncementButtonVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.092"/>
-  <testcase name="verifyAnnouncementTableHeadersVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.801"/>
-  <testcase name="verifyDateColumnFormat" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.337"/>
-  <testcase name="verifySearchByTitle" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.0"/>
-  <testcase name="verifySearchByPartialTitle" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.0"/>
-  <testcase name="verifySearchCaseInsensitive" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.0"/>
-  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.995"/>
-  <testcase name="verifyViewAnnouncementFlow" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.727"/>
-  <testcase name="verifyViewAnnouncementFieldsVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.751"/>
-  <testcase name="verifyEditAnnouncementFlow" classname="com.ananda.web.admin.tests.AnnouncementTest" time="1.706"/>
-  <testcase name="verifyEditFormFieldsVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.411"/>
-  <testcase name="verifyAddAnnouncementFormOpens" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.419"/>
-  <testcase name="verifyAddFormFieldsVisible" classname="com.ananda.web.admin.tests.AnnouncementTest" time="3.588"/>
-  <testcase name="verifyDeletePopupOpenAndCancel" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.01"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.304"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.344"/>
-  <testcase name="verifyNoEditActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.225"/>
-  <testcase name="verifyNoDeleteActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.059"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.879"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.AnnouncementTest" time="2.717"/>
-  <testcase name="verifySqlLikeSearchHandled" classname="com.ananda.web.admin.tests.AnnouncementTest" time="0.936"/>
-  <testcase name="verifyProgramFeedbackTabLoads" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.024"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.05"/>
-  <testcase name="verifyDateFilterControlsVisible" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.09"/>
-  <testcase name="verifyProgramFeedbackTableHeaders" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.073"/>
-  <testcase name="verifyCheckInCheckOutDateRangeFormat" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.006"/>
-  <testcase name="verifySubmittedOnDateFormat" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.017"/>
-  <testcase name="verifySearchByProgramTitle" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.0"/>
-  <testcase name="verifySearchByGuestName" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.0"/>
-  <testcase name="verifySearchByPartialKeyword" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.013"/>
-  <testcase name="verifySearchCaseInsensitive" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.007"/>
-  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.167"/>
-  <testcase name="verifyViewProgramFeedbackFlow" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.016"/>
-  <testcase name="verifyViewPageHeaderFieldsVisible" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.009"/>
-  <testcase name="verifyFeedbackQuestionnaireSectionsVisible" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.0"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="1.02"/>
-  <testcase name="verifyNoViewActionWhenNoSearchResult" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="1.016"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="0.721"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.ProgramFeedbackTest" time="1.535"/>
-  <testcase name="verifyTestimonialsTabLoads" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.15"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.124"/>
-  <testcase name="verifyDateFilterControlsVisible" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.183"/>
-  <testcase name="verifyTestimonialsTableHeaders" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.199"/>
-  <testcase name="verifyCheckInCheckOutDateRangeFormat" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.009"/>
-  <testcase name="verifySubmittedOnDateFormat" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.011"/>
-  <testcase name="verifyStatusVisibleInRows" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.013"/>
-  <testcase name="verifyMarkControlVisibleInRows" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.007"/>
-  <testcase name="verifySearchByProgramTitle" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.0"/>
-  <testcase name="verifySearchByGuestName" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.0"/>
-  <testcase name="verifySearchByPartialKeyword" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.0"/>
-  <testcase name="verifySearchCaseInsensitive" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.001"/>
-  <testcase name="verifyClearSearchRestoresList" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.234"/>
-  <testcase name="verifyDetailsTextVisible" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.013"/>
-  <testcase name="verifyMarkToggleInteractionHandled" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.0"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.TestimonialsTest" time="1.127"/>
-  <testcase name="verifyNoMarkControlWhenNoSearchResult" classname="com.ananda.web.admin.tests.TestimonialsTest" time="1.012"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.765"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.TestimonialsTest" time="3.657"/>
-  <testcase name="verifyInvalidDateRangeHandled" classname="com.ananda.web.admin.tests.TestimonialsTest" time="0.016"/>
-  <testcase name="verifyQmsScorecardTabLoads" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.411"/>
-  <testcase name="verifyMonthDropdownVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.211"/>
-  <testcase name="verifyYearDropdownVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.235"/>
-  <testcase name="verifyDownloadExcelButtonVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.25"/>
-  <testcase name="verifyMainSectionHeadersVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.451"/>
-  <testcase name="verifyMetricColumnsVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.396"/>
-  <testcase name="verifyNetPromoterScoreRowVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.408"/>
-  <testcase name="verifyOverallQmsScoreRowVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.424"/>
-  <testcase name="verifyWellnessObjectiveSectionVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.382"/>
-  <testcase name="verifyConsultantsSectionVisible" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.37"/>
-  <testcase name="verifyNumericCellsFormatSafe" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="39.731"/>
-  <testcase name="verifyMonthSelectionUpdatesSafely" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.0"/>
-  <testcase name="verifyYearSelectionUpdatesSafely" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.0"/>
-  <testcase name="verifyDownloadButtonClickHandledSafely" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.106"/>
-  <testcase name="verifyRapidMonthSwitchStability" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.0"/>
-  <testcase name="verifyRapidYearSwitchStability" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.0"/>
-  <testcase name="verifyRefreshAfterFilterChangesStability" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="1.331"/>
-  <testcase name="verifyScrollAndUiStability" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.477"/>
-  <testcase name="verifyRepeatedDownloadClicksDoNotBreakUi" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.394"/>
-  <testcase name="verifyInvalidMonthYearInputHandledSafely" classname="com.ananda.web.admin.tests.QMSScorecardTest" time="0.134"/>
-  <testcase name="verifyFeedbackReportTabLoads" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.134"/>
-  <testcase name="verifyDateFiltersVisible" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.171"/>
-  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.234"/>
-  <testcase name="verifyFeedbackReportTableHeaders" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.194"/>
-  <testcase name="verifyCheckInDateFormat" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.017"/>
-  <testcase name="verifyCheckOutDateFormat" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.0"/>
-  <testcase name="verifyFeedbackDateFormat" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.05"/>
-  <testcase name="verifyCheckOutAfterCheckIn" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.017"/>
-  <testcase name="verifyDateRangeFilterUpdatesSafely" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.026"/>
-  <testcase name="verifyDownloadExcelClickHandledSafely" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.092"/>
-  <testcase name="verifyRefreshStability" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.461"/>
-  <testcase name="verifyInvalidDateRangeHandled" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.025"/>
-  <testcase name="verifyNoDataDateRangeHandled" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.031"/>
-  <testcase name="verifyRepeatedDownloadClicksDoNotBreakUi" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.326"/>
-  <testcase name="verifyRapidDateSwitchStability" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.034"/>
-  <testcase name="verifyScrollStability" classname="com.ananda.web.admin.tests.FeedbackReportTest" time="0.281"/>
-  <testcase name="verifyGuestCommentsTabLoads" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.067"/>
-  <testcase name="verifyDateFiltersVisible" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.057"/>
-  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.087"/>
-  <testcase name="verifyGuestCommentsTableHeaders" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.133"/>
-  <testcase name="verifyCheckOutDateFormat" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.008"/>
-  <testcase name="verifyHighlightsColumnHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.059"/>
-  <testcase name="verifyImprovementColumnHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.05"/>
-  <testcase name="verifyTherapistsRecognisedColumnHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.045"/>
-  <testcase name="verifyServiceStaffRecognisedColumnHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.012"/>
-  <testcase name="verifyDateRangeFilterUpdatesSafely" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.008"/>
-  <testcase name="verifyDownloadClickHandledSafely" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.095"/>
-  <testcase name="verifyInvalidDateRangeHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.012"/>
-  <testcase name="verifyNoDataDateRangeHandled" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.014"/>
-  <testcase name="verifyRepeatedDownloadClicksDoNotBreakUi" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.05"/>
-  <testcase name="verifyScrollStability" classname="com.ananda.web.admin.tests.GuestCommentsTest" time="0.166"/>
-  <testcase name="verifyConsultantRatingsTabLoads" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.041"/>
-  <testcase name="verifyDateFiltersVisible" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.069"/>
-  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.088"/>
-  <testcase name="verifyConsultantRatingsTableHeaders" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.073"/>
-  <testcase name="verifyConsultantNameVisible" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.033"/>
-  <testcase name="verifyMetricCellsNumeric" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.034"/>
-  <testcase name="verifyPercentageCellsValid" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.078"/>
-  <testcase name="verifyDateRangeFilterUpdatesSafely" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.016"/>
-  <testcase name="verifyDownloadClickHandledSafely" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.243"/>
-  <testcase name="verifyRefreshStability" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.368"/>
-  <testcase name="verifyInvalidDateRangeHandled" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.0"/>
-  <testcase name="verifyNoDataDateRangeHandled" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.017"/>
-  <testcase name="verifyRepeatedDownloadClicksDoNotBreakUi" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.333"/>
-  <testcase name="verifyScrollStability" classname="com.ananda.web.admin.tests.ConsultantRatingsTest" time="0.218"/>
-  <testcase name="verifyTherapistSessionsTabLoads" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.033"/>
-  <testcase name="verifySearchControlVisible" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.032"/>
-  <testcase name="verifyTherapistDropdownVisible" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.05"/>
-  <testcase name="verifyDateFilterVisible" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.034"/>
-  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.029"/>
-  <testcase name="verifyTherapistSessionsTableHeaders" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.2"/>
-  <testcase name="verifySessionTimeFormat" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.269"/>
-  <testcase name="verifySearchByGuestName" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.0"/>
-  <testcase name="verifySearchByPartialGuestName" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.0"/>
-  <testcase name="verifySearchCaseInsensitive" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.0"/>
-  <testcase name="verifyTherapistFilterHandled" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.288"/>
-  <testcase name="verifyDownloadClickHandledSafely" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.116"/>
-  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.824"/>
-  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.735"/>
-  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="1.877"/>
-  <testcase name="verifyInvalidTherapistSelectionHandledSafely" classname="com.ananda.web.admin.tests.TherapistSessionsTest" time="0.133"/>
-  <testcase name="verifyAnalyticalReportPageLoads" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.011"/>
-  <testcase name="verifyDownloadExcelVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.032"/>
-  <testcase name="verifyAdvancedSearchButtonVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.032"/>
-  <testcase name="verifyColumnManagementIconVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.09"/>
-  <testcase name="verifyReportTableVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.078"/>
-  <testcase name="verifyDefaultTableHeadersVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.201"/>
-  <testcase name="verifyRowsPerPageVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.035"/>
-  <testcase name="verifyPaginationRangeVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.758"/>
-  <testcase name="verifyPaginationControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.079"/>
-  <testcase name="verifyColumnManagementPopupOpens" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.772"/>
-  <testcase name="verifyColumnManagementControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.681"/>
-  <testcase name="verifyDefaultSelectedColumnsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="14.567"/>
-  <testcase name="verifyAvailableColumnsLoaded" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.58"/>
-  <testcase name="verifyColumnManagementCancelClosesPopup" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.631"/>
-  <testcase name="verifyShowSelectedColumnsHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.65"/>
-  <testcase name="verifyAdvancedSearchPopupOpens" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.01"/>
-  <testcase name="verifyAdvancedSearchControlsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.01"/>
-  <testcase name="verifyCriteriaModeButtonsVisible" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.018"/>
-  <testcase name="verifyAdvancedSearchDropdownsLoaded" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.012"/>
-  <testcase name="verifySingleCriterionCanBePreparedSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.012"/>
-  <testcase name="verifyAdvancedSearchCancelClosesPopup" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.0"/>
-  <testcase name="verifyRepeatedColumnPopupOpenHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.047"/>
-  <testcase name="verifyRemovingSelectedColumnHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.466"/>
-  <testcase name="verifyShowSelectedColumnsWithoutChangesHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.487"/>
-  <testcase name="verifySearchWithoutCriteriaHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.011"/>
-  <testcase name="verifyAdvancedSearchResetHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.012"/>
-  <testcase name="verifyCriterionDeleteHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.014"/>
-  <testcase name="verifyCriterionEditHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.013"/>
-  <testcase name="verifyRepeatedAdvancedSearchOpenHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.009"/>
-  <testcase name="verifyRepeatedColumnRemoveHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.645"/>
-  <testcase name="verifyColumnPopupCancelAfterChangeHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.537"/>
-  <testcase name="verifyAdvancedSearchCancelAfterCriterionHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.008"/>
-  <testcase name="verifyRepeatedSearchWithoutCriteriaHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.014"/>
-  <testcase name="verifyRepeatedResetHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.007"/>
-  <testcase name="verifyColumnPopupReopenAfterCancelHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.016"/>
-  <testcase name="verifyAdvancedSearchReopenAfterCancelHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.014"/>
-  <testcase name="verifyColumnManagementAndAdvancedSearchSequentialUseHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.177"/>
-  <testcase name="verifyLongUiScrollHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.059"/>
-  <testcase name="verifyRefreshAfterColumnPopupHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.063"/>
-  <testcase name="verifyRefreshAfterAdvancedSearchHandledSafely" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.07"/>
-  <testcase name="verifyRapidOpenCloseStability" classname="com.ananda.web.admin.tests.AnalyticalReportTest" time="0.144"/>
+  <testcase name="verifyRoleFilter" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.001"/>
+  <testcase name="verifyViewMemberFlow" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.007"/>
+  <testcase name="verifyTeamMemberBreadcrumbNavigation" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.007"/>
+  <testcase name="verifyEditMemberPageFields" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.005"/>
+  <testcase name="verifyOpenAddNewMemberForm" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.009"/>
+  <testcase name="verifyInvalidSearchShowsNoResult" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.577"/>
+  <testcase name="verifySpecialCharacterSearchHandled" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.593"/>
+  <testcase name="verifyVeryLongSearchHandled" classname="com.ananda.web.admin.tests.TeamMembersTest" time="0.807"/>
 </testsuite>

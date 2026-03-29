@@ -324,8 +324,22 @@ public class AccessManagementPage {
                 text = v == null ? "" : v.trim().toLowerCase();
             }
             if (text.isEmpty()) continue;
+            text = text.replaceAll("\\s+", " ").trim();
+            if (text.equals("select")
+                    || text.equals("select...")
+                    || text.equals("choose")
+                    || text.equals("all")
+                    || text.equals("-")
+                    || text.equals("--")
+                    || text.equals("n/a")) {
+                continue;
+            }
             checked++;
-            if (!allowed.contains(text) && !(text.contains("hide") || text.contains("view") || text.contains("write"))) {
+            boolean containsAllowedToken = text.contains("hide")
+                    || text.contains("view only")
+                    || text.contains("write only")
+                    || text.matches(".*\\b(view|write)\\b.*");
+            if (!allowed.contains(text) && !containsAllowedToken) {
                 return false;
             }
         }

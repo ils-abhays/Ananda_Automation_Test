@@ -1,0 +1,580 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>100/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Mar 29 15:15:49 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>77 seconds (77459 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyPaginationRangeVisible()'><b>verifyPaginationRangeVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifySearchByEmail()'><b>verifySearchByEmail</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyViewMemberFlow()'><b>verifyViewMemberFlow</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySearchCaseInsensitivity()'><b>verifySearchCaseInsensitivity</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyReportTableVisible()'><b>verifyReportTableVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRefreshAfterAdvancedSearchHandledSafely()'><b>verifyRefreshAfterAdvancedSearchHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyDownloadsPageLoads()'><b>verifyDownloadsPageLoads</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRefreshAfterInvalidSelectionStability()'><b>verifyRefreshAfterInvalidSelectionStability</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnManagementCancelClosesPopup()'><b>verifyColumnManagementCancelClosesPopup</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyPermissionUpdateOptional()'><b>verifyPermissionUpdateOptional</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRepeatedColumnRemoveHandledSafely()'><b>verifyRepeatedColumnRemoveHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyTeamMembersSearchVisible()'><b>verifyTeamMembersSearchVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyInvalidSearchShowsNoResult()'><b>verifyInvalidSearchShowsNoResult</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyTeamMemberBreadcrumbNavigation()'><b>verifyTeamMemberBreadcrumbNavigation</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyPaginationControlsVisible()'><b>verifyPaginationControlsVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyScrollAndUiStability()'><b>verifyScrollAndUiStability</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchResetHandledSafely()'><b>verifyAdvancedSearchResetHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchPopupOpens()'><b>verifyAdvancedSearchPopupOpens</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyDeletePopupOpenAndCancel()'><b>verifyDeletePopupOpenAndCancel</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyPermissionDropdownsInteractable()'><b>verifyPermissionDropdownsInteractable</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyLastPermissionControlUsableAfterScroll()'><b>verifyLastPermissionControlUsableAfterScroll</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySearchByNameOrMobile()'><b>verifySearchByNameOrMobile</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyLongUiScrollHandledSafely()'><b>verifyLongUiScrollHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyCriteriaModeButtonsVisible()'><b>verifyCriteriaModeButtonsVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRepeatedAdvancedSearchOpenHandledSafely()'><b>verifyRepeatedAdvancedSearchOpenHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyDefaultSelectedColumnsVisible()'><b>verifyDefaultSelectedColumnsVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>14</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyUserRoleDropdownVisible()'><b>verifyUserRoleDropdownVisible</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifySearchTeamMember()'><b>verifySearchTeamMember</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnPopupReopenAfterCancelHandledSafely()'><b>verifyColumnPopupReopenAfterCancelHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyVeryLongSearchHandled()'><b>verifyVeryLongSearchHandled</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnPopupCancelAfterChangeHandledSafely()'><b>verifyColumnPopupCancelAfterChangeHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyDeleteActionVisible()'><b>verifyDeleteActionVisible</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAnalyticalReportPageLoads()'><b>verifyAnalyticalReportPageLoads</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRapidRoleSwitchStability()'><b>verifyRapidRoleSwitchStability</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRoleSelectionPersistsAcrossRefresh()'><b>verifyRoleSelectionPersistsAcrossRefresh</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyCanOpenAnyPermissionDropdown()'><b>verifyCanOpenAnyPermissionDropdown</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyInvalidSearchShowsNoResult()'><b>verifyInvalidSearchShowsNoResult</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnManagementAndAdvancedSearchSequentialUseHandledSafely()'><b>verifyColumnManagementAndAdvancedSearchSequentialUseHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyAddedOnDateFormat()'><b>verifyAddedOnDateFormat</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyEditMemberPageFields()'><b>verifyEditMemberPageFields</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAvailableColumnsLoaded()'><b>verifyAvailableColumnsLoaded</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnManagementPopupOpens()'><b>verifyColumnManagementPopupOpens</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>14</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifySelectRoleLoadsPermissionMatrix()'><b>verifySelectRoleLoadsPermissionMatrix</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifySpecialCharacterSearchHandled()'><b>verifySpecialCharacterSearchHandled</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnManagementControlsVisible()'><b>verifyColumnManagementControlsVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>14</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifySpecialCharacterRoleSearchStability()'><b>verifySpecialCharacterRoleSearchStability</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyNewMemberButtonVisible()'><b>verifyNewMemberButtonVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyInvalidRoleSelectionHandled()'><b>verifyInvalidRoleSelectionHandled</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyAccessManagementPageLoads()'><b>verifyAccessManagementPageLoads</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRepeatedResetHandledSafely()'><b>verifyRepeatedResetHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchButtonVisible()'><b>verifyAdvancedSearchButtonVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyCommonPermissionModulesVisible()'><b>verifyCommonPermissionModulesVisible</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRefreshAfterColumnPopupHandledSafely()'><b>verifyRefreshAfterColumnPopupHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyVeryLongRoleSearchStability()'><b>verifyVeryLongRoleSearchStability</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifySearchByMobile()'><b>verifySearchByMobile</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchControlsVisible()'><b>verifyAdvancedSearchControlsVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyCriterionEditHandledSafely()'><b>verifyCriterionEditHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyDownloadsTableHeaders()'><b>verifyDownloadsTableHeaders</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRemovingSelectedColumnHandledSafely()'><b>verifyRemovingSelectedColumnHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchCancelClosesPopup()'><b>verifyAdvancedSearchCancelClosesPopup</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyLongKeywordSearchStability()'><b>verifyLongKeywordSearchStability</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyNoDuplicatePermissionRows()'><b>verifyNoDuplicatePermissionRows</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyClearSearchRestoresList()'><b>verifyClearSearchRestoresList</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRapidOpenCloseStability()'><b>verifyRapidOpenCloseStability</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyPermissionValuesAllowedSet()'><b>verifyPermissionValuesAllowedSet</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySearchByEmail()'><b>verifySearchByEmail</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRepeatedSearchWithoutCriteriaHandledSafely()'><b>verifyRepeatedSearchWithoutCriteriaHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySearchControlVisible()'><b>verifySearchControlVisible</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySearchByPartialEmail()'><b>verifySearchByPartialEmail</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyOpenAddNewMemberForm()'><b>verifyOpenAddNewMemberForm</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyOtpToggleVisible()'><b>verifyOtpToggleVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchCancelAfterCriterionHandledSafely()'><b>verifyAdvancedSearchCancelAfterCriterionHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRoleSwitchChangesContext()'><b>verifyRoleSwitchChangesContext</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchDropdownsLoaded()'><b>verifyAdvancedSearchDropdownsLoaded</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyRoleFilter()'><b>verifyRoleFilter</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyRoleFilterVisible()'><b>verifyRoleFilterVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyShowSelectedColumnsWithoutChangesHandledSafely()'><b>verifyShowSelectedColumnsWithoutChangesHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifySpecialCharacterSearchHandled()'><b>verifySpecialCharacterSearchHandled</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifySingleCriterionCanBePreparedSafely()'><b>verifySingleCriterionCanBePreparedSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRoleDropdownHasOptions()'><b>verifyRoleDropdownHasOptions</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyCriterionDeleteHandledSafely()'><b>verifyCriterionDeleteHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyNoBlankPermissionValuesAfterRoleSelection()'><b>verifyNoBlankPermissionValuesAfterRoleSelection</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyLastLoginFormat()'><b>verifyLastLoginFormat</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyPasswordIndicatorVisible()'><b>verifyPasswordIndicatorVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyDownloadExcelVisible()'><b>verifyDownloadExcelVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyTeamMembersTableHeadersVisible()'><b>verifyTeamMembersTableHeadersVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyTeamMembersPageLoads()'><b>verifyTeamMembersPageLoads</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyEmptyPromptBeforeSelectionOrLoadedState()'><b>verifyEmptyPromptBeforeSelectionOrLoadedState</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRepeatedColumnPopupOpenHandledSafely()'><b>verifyRepeatedColumnPopupOpenHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyEmailColumnFormat()'><b>verifyEmailColumnFormat</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyDefaultTableHeadersVisible()'><b>verifyDefaultTableHeadersVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyColumnManagementIconVisible()'><b>verifyColumnManagementIconVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifySearchWithoutCriteriaHandledSafely()'><b>verifySearchWithoutCriteriaHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyEmailColumnFormat()'><b>verifyEmailColumnFormat</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyAdvancedSearchReopenAfterCancelHandledSafely()'><b>verifyAdvancedSearchReopenAfterCancelHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.DownloadsTest.verifyDeleteConfirmOptional()'><b>verifyDeleteConfirmOptional</b><br>Test class: com.ananda.web.admin.tests.DownloadsTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.DownloadsTest@42e99e4a</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyRowsPerPageVisible()'><b>verifyRowsPerPageVisible</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AccessManagementTest.verifyRoleOptionsAvailable()'><b>verifyRoleOptionsAvailable</b><br>Test class: com.ananda.web.admin.tests.AccessManagementTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AccessManagementTest@795cd85e</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.AnalyticalReportTest.verifyShowSelectedColumnsHandledSafely()'><b>verifyShowSelectedColumnsHandledSafely</b><br>Test class: com.ananda.web.admin.tests.AnalyticalReportTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.AnalyticalReportTest@4d9e68d0</td></tr>
+<tr>
+<td title='com.ananda.web.admin.tests.TeamMembersTest.verifyRowActionsVisible()'><b>verifyRowActionsVisible</b><br>Test class: com.ananda.web.admin.tests.TeamMembersTest</td>
+<td></td>
+<td>0</td>
+<td>com.ananda.web.admin.tests.TeamMembersTest@14dd9eb7</td></tr>
+</table><p>
+</body>
+</html>

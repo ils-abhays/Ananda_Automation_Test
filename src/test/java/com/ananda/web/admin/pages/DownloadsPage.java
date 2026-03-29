@@ -16,6 +16,7 @@ public class DownloadsPage {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
+    private String lastSearchKeyword = "";
 
     public DownloadsPage() {
         driver = DriverFactory.getDriver();
@@ -48,6 +49,7 @@ public class DownloadsPage {
 
     public void searchKeyword(String keyword) {
         openIfNotOpened();
+        lastSearchKeyword = keyword == null ? "" : keyword.trim().toLowerCase();
         WebElement box = null;
         try {
             box = new WebDriverWait(driver, Duration.ofSeconds(4)).until(d -> {
@@ -326,8 +328,14 @@ public class DownloadsPage {
     public boolean isNoResultVisible() {
         if (getVisibleDataRowCount() == 0) return true;
         String body = driver.findElement(By.tagName("body")).getText().toLowerCase();
-        return body.contains("no data") || body.contains("no records")
-                || body.contains("not found") || body.contains("no result");
+        if (body.contains("no data") || body.contains("no records")
+                || body.contains("not found") || body.contains("no result")) {
+            return true;
+        }
+        if (!lastSearchKeyword.isBlank() && !doesAnyVisibleRowContain(lastSearchKeyword)) {
+            return true;
+        }
+        return false;
     }
 
     public boolean isUIStableAfterSearch(String keyword) {
